@@ -1,16 +1,137 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 {% block title %}{% trans "articles" %}{% endblock title %}
 {% block header %}{% endblock header %}
 {% block content %}
-<h2>{% trans "articles" %}</h2>
-<hr>
-<p><a href="{% url 'article1'%}">Кто такие миллениалы?</a></p>
-<p><a href="{% url 'article2'%}">Великая среда: история и традиции</a></p>
-<p><a href="{% url 'article3'%}">Гай Ричи снял сериал по своей культовой пацанской комедии «Джентльмены»</a></p>
-<p><a href="{% url 'article4'%}">«Господи, пусть не сломается» Гагарин первым полетел в космос. Как аварийная ситуация на борту едва не стоила ему жизни?</a></p>
-<p><a href="{% url 'article5'%}">Женщины по всему миру скупают роскошную одежду</a></p>
-<p><a href="{% url 'article6'%}">Не пропустить болезнь. Стал известен перечень бесплатных медицинских услуг для россиян. Что в него входит?</a></p>
-<p><a href="{% url 'article7'%}">На финишной прямой. В России стартует Всемирный фестиваль молодежи. Почему в цифровую эпоху интерес к нему растет?</a></p>
+<div class="div-width-100-text-center">
+	<h3>{% trans "articles" %}</h3>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>Кто такие миллениалы?</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>В 1990-х годах в США <a href="https://archive.org/details/GenerationsTheHistoryOfAmericasFuture1584To2069ByWilliamStraussNeilHowe/page/n1/mode/1up" target="_blank">была разработана</a> так называемая теория поколений. Согласно ей, между людьми, родившимися в один и тот же период, есть много общего: их ценности, а также отношение к важнейшим сферам жизни, например, семье и работе. Миллениалами между тем называют представителей поколения Y, родившихся в 1981-1996 годах.</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article1_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article1'%}">Подробнее</a></p>
+	</div>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>Великая среда: история и традиции</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>Великая среда — третий день Страстной седмицы, недели перед Пасхой. Православные верующие вспоминают сразу два важных библейских события, которые произошли в последние дни земной жизни Христа: предательство Иуды и миропомазание Иисуса. Рассказываем, какого числа праздник отмечают в 2024 году и какие богослужения проводят в храмах.</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article2_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article2'%}">Подробнее</a></p>
+	</div>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>Гай Ричи снял сериал по своей культовой пацанской комедии «Джентльмены»</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>На <a href="https://lenta.ru/tags/organizations/netflix/" target="_blank" style='-webkit-font-smoothing: antialiased;box-sizing: border-box;text-decoration: rgb(203, 203, 203);text-underline-offset: 1px;transition: text-decoration-color 0.15s ease-out 0s'>Netflix</a> целиком вышли «Джентльмены» Гая Ричи по мотивам его собственного, настолько популярного, что уже ставшего народным фильма пятилетней давности. Главный гопник мирового кинематографа на своем новом проекте выступил шоураннером, сценаристом и продюсером, а также снял несколько эпизодов в качестве режиссера.</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article3_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article3'%}">Подробнее</a></p>
+	</div>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>«Господи, пусть не сломается» Гагарин первым полетел в космос. Как аварийная ситуация на борту едва не стоила ему жизни?</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>Ровно 90 лет назад, 9 марта 1934 года, в небольшой смоленской деревне родился мальчик, имя которого навсегда вошло в историю: <a href="https://lenta.ru/tags/persons/gagarin-yuriy/" target="_blank">Юрий Гагарин</a>. Через 27 лет о первом на планете космонавте будут с восторгом говорить во всем мире. Его именем назовут десятки тысяч детей. Впрочем, мало кто знает, что слава первого человека в космосе могла обойти его стороной. Всему виной — нештатная ситуация на борту корабля, о которой во время полета не говорили даже самому Гагарину. В издательстве «Альпина нон-фикшн» выходит книга британского историка <a href="https://lenta.ru/tags/persons/uoker-stiven/" target="_blank">Стивена Уокера</a> «Первый». Центральное место в ней занимает история первого полета Гагарина. С разрешения издательства публикуем отрывок из нее.</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article4_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article4'%}">Подробнее</a></p>
+	</div>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>Женщины по всему миру скупают роскошную одежду</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>В социальных сетях набирает популярность новый тренд — #GirlMath («женская математика»). В TikTok видео с этим хештегом посмотрели сотни миллионов пользователей. В роликах девушки объясняют, почему очередная дорогостоящая покупка на самом деле выгодна или даже бесплатна. Критики считают, что эта тенденция лишь подчеркивает тот факт, что женщины плохо разбираются в цифрах, и укрепляет гендерные стереотипы, другие же отмечают разумный подход к тратам в условиях финансового кризиса.</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article5_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article5'%}">Подробнее</a></p>
+	</div>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>Не пропустить болезнь. Стал известен перечень бесплатных медицинских услуг для россиян. Что в него входит?</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>Каждый взрослый россиянин по <a href="https://xn--80aapampemcchfmo7a3c9ehj.xn--p1ai/projects/zdravookhranenie?utm_source=Lenta_Spec&utm_medium=Statica&utm_content=All&utm_campaign=np_zdravookhranenie_article" target="_blank"> нацпроекту «Здравоохранение»</a> имеет право регулярно проходить бесплатное комплексное медицинское обследование. Его проводят каждые три года, а начиная с 40 лет — ежегодно, даже если нет никаких жалоб на здоровье. Такая диспансеризация помогает выявить опасные заболевания на ранних стадиях и предотвратить их развитие. Как это работает сегодня?</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article6_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article6'%}">Подробнее</a></p>
+	</div>
+</div>
+<div class="card" style="margin-top: 5px;">
+	<div class="card-header">
+		<h2>На финишной прямой. В России стартует Всемирный фестиваль молодежи. Почему в цифровую эпоху интерес к нему растет?</h2>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-md-8">
+				<p>Всемирный фестиваль молодежи стартует 1 марта 2024 года. Еще на этапе подготовки он побил все рекорды по количеству участников: от желающих стать делегатом поступило более 300 тысяч заявок — в шесть раз больше, чем в 2017 году. Организатором фестиваля стало <a href="https://lenta.ru/tags/organizations/rosmolodezh/" target="_blank"> Федеральное агентство по делам молодежи</a> (Росмолодежь). ВФМ состоится в «Сириусе» — федеральной территории, расположенной в Имеретинской долине на берегу Черного моря. Накануне открытия мы решили поделиться, чем запомнились участникам фестивали прошлых лет, и заглянуть за кулисы начинающегося праздника.</p>
+			</div>
+			<div class="col-md-4">
+				<p><img class="img-center" src="{% static 'images/article7_1.jpg' %}" alt="image"></p>
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<p><a href="{% url 'article7'%}">Подробнее</a></p>
+	</div>
+</div>
 {% endblock content %}
 

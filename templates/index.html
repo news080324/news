@@ -7,109 +7,77 @@
 {% endblock header %}
 {% block content %}
 
-<style>
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  margin: 10px;
-}
-.text-center {
-  text-align: center;
-  text-color: Gold;
-  margin: 1px;
-  padding: 5px;
-  height: 200px;
-  background-color: DarkMagenta;
-}
-.text-center h3{
-  color: Gold;  
-}
-.text-center p{
-  color: Gold;  
-}
-</style>
-
 <div class="div-width-100-text-center">
 	<h1>Новости</h1>
 </div>
-<div class="row" style="margin-top: 10px">
-	<p></p>
-	
-<!-- Gismeteo Informer (begin) -->
-<div id="GMI_100x100-3_ru_4368" class="gm-info">
-    <div style="position:relative;width:100px;height:100px;border:solid 1px;background:#F5F5F5;border-color:#EAEAEA #E4E4E4 #DDDDDD #E6E6E6;border-radius:4px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;">
-        <a style="font:11px/13px Arial,Verdana,sans-serif;text-align:center;text-overflow:ellipsis;text-decoration:none;display:block;overflow:hidden;margin:2px 3px;color:#0678CD;" href="https://www.gismeteo.kz/weather-moscow-4368/">Москва</a>
-        <a style="font:9px/11px Tahoma,Arial,sans-serif;letter-spacing:0.5px;text-align:center;text-decoration:none;position:absolute;bottom:3px;left:0;width:100%;color:#333;" href="https://www.gismeteo.kz"><span style="color:#0099FF;">Gis</span>meteo</a>
-    </div>
-</div>
-<script type="text/javascript">
-(function() {
-    var
-        d = this.document,
-        o = this.navigator.userAgent.match(/MSIE (6|7|8)/) ? true : false,
-        s = d.createElement('script');
- 
-    s.src  = 'https://www.gismeteo.kz/informers/simple/install/';
-    s.type = 'text/javascript';
-    s[(o ? 'defer' : 'async')] = true;
-    s[(o ? 'onreadystatechange' : 'onload')] = function() {
-        try {new GmI({
-            slug : 'f3cc13ff29fc6de6eb48c4ef09231adf',
-            type : '100x100-3',
-            city : '4368',
-            lang : 'ru'
-        })} catch (e) {}
-    }
- 
-    d.body.appendChild(s);
-})();
-</script>
-<!-- Gismeteo Informer (finish) -->	
-
-
-<iframe style="width:320px;border:0;overflow:hidden;background-color:transparent;height:235px" scrolling="no" src="https://fortraders.org/informers/getInformer?st=1&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=1&showGetBtn=0&hideHeader=0&hideDate=0&w=320&codes=1&colors=false&items=2%2C21&columns=todayCourse&toCur=11111"></iframe>
-
-</div>
-<hr>
-<hr>
-{% if news13.count > 0 %}
-	<div class="div-width-100-text-center">
-		<h1>Новости</h1>
+<div class="row">
+	{% if news1.count > 0 %}
+	<div class="col-lg-2 border" style="padding:10px;">
+		{% if news24.count > 0 %}
+			{% for c in news24 %}
+			<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+			<div class="row">
+				{% if c.photo.url != None %}
+					<img class="img-center3" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">
+				{% endif %}
+			</div>
+			<div class="row">
+				<h6><a href="{% url 'news_read' c.id %}">{{ c.title }}</a></h6>
+			</div>
+			<hr class="my-4">
+			{% endfor %}
+		{% endif %}
 	</div>
-
-	<div class="row">
-		{% for n in news13 %}
-			<!-- <div class="card"> -->
-			<div class="col-lg-3 col-md-4 col-6 thumb" style="margin-top: 5px;">
-				<div class="card-header">
-					<p>{{ n.daten | date:"d.m.Y H:i" }}<p>
-				</div>
-				<div class="card-body">	
-					<div class="row">			
-						{% if n.photo.url != None %}
-							<img style="width:100%; max-width:600px;" src="{{ n.photo.url}}" alt="{{ n.photo.url }}">
-						{% endif %}
-					</div>					
-					<!-- <div class="row"> -->
-						<!-- <div class="col-md-8"> -->
-							<!-- <p>{{ n.details | linebreaks }}</p> -->
-						<!-- </div>								 -->
-						<!-- <div class="col-md-4"> -->
-							<!-- {% if n.photo.url != None %} -->
-								<!-- <img style="width:100%; max-width:400px;" src="{{ n.photo.url}}" alt="{{ n.photo.url }}"> -->
-							<!-- {% endif %} -->
-						<!-- </div> -->
-					<!-- </div> -->
-				</div>
-				<div class="card-footer">
-					<h5><a href="{% url 'news_read' n.id %}">{{ n.title }}</a></h5>
+	<div class="col-lg-8 border" style="padding:10px;">
+		{% for c in news1 %}
+			<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+			{% if c.photo.url != None %}
+				<img class="img-center" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">
+			{% endif %}
+			<h4><a href="{% url 'news_read' c.id %}">{{ c.title }}</a></h4>
+		{% endfor %}
+	</div>
+	<div class="col-lg-2 border" style="padding:10px;">
+		<iframe style="width:210px;border:0;overflow:hidden;background-color:transparent;height:276px" scrolling="no" src="https://fortraders.org/informers/getInformer?st=1&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=1&showGetBtn=0&hideHeader=0&hideDate=0&w=210&codes=1&colors=false&items=2%2C21%2C30&columns=todayCourse&toCur=11111"></iframe>
+		<hr>
+		<div class="row" style="margin-top: 10px">
+			<!-- Gismeteo Informer (begin) -->
+			<div id="GMI_180x150-3_ru_4368" class="gm-info">
+				<div style="position:relative;width:180px;height:150px;border:solid 1px;background:#F5F5F5;border-color:#EAEAEA #E4E4E4 #DDDDDD #E6E6E6;border-radius:4px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;">
+					<a style="font:11px/13px Arial,Verdana,sans-serif;text-align:center;text-overflow:ellipsis;text-decoration:none;display:block;overflow:hidden;margin:2px 3px;color:#0678CD;" href="https://www.gismeteo.ru/weather-moscow-4368/">Москва</a>
+					<a style="font:9px/11px Tahoma,Arial,sans-serif;letter-spacing:0.5px;text-align:center;text-decoration:none;position:absolute;bottom:3px;left:0;width:100%;color:#333;" href="https://www.gismeteo.ru"><span style="color:#0099FF;">Gis</span>meteo</a>
 				</div>
 			</div>
-		{% endfor %}	
+			<script type="text/javascript">
+			(function() {
+				var
+					d = this.document,
+					o = this.navigator.userAgent.match(/MSIE (6|7|8)/) ? true : false,
+					s = d.createElement('script');
+			 
+				s.src  = 'https://www.gismeteo.ru/informers/simple/install/';
+				s.type = 'text/javascript';
+				s[(o ? 'defer' : 'async')] = true;
+				s[(o ? 'onreadystatechange' : 'onload')] = function() {
+					try {new GmI({
+						slug : 'f3cc13ff29fc6de6eb48c4ef09231adf',
+						type : '180x150-3',
+						city : '4368',
+						lang : 'ru'
+					})} catch (e) {}
+				}
+			 
+				d.body.appendChild(s);
+			})();
+			</script>
+			<!-- Gismeteo Informer (finish) -->			
+		</div>		
 	</div>
-{% endif %}
+	{% endif %}
+</div>
+<h3 style="text-align: center;" ><a href="{% url 'news_list' %}">{% trans "all newss" %}</a></h3>
+
+
 
 
 {% endblock content %}

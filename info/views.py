@@ -64,8 +64,9 @@ def group_required(*group_names):
 # Стартовая страница 
 def index(request):
     try:
-        news13 = News.objects.all().order_by('-daten')[0:4]
-        return render(request, "index.html", {"news13": news13})            
+        news1 = News.objects.all().order_by('-daten')[0:1]
+        news24 = News.objects.all().order_by('-daten')[1:4]
+        return render(request, "index.html", {"news1": news1, "news24": news24, })            
     except Exception as exception:
         print(exception)
         return HttpResponse(exception)    

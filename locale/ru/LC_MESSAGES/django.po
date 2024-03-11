@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-11 11:42+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\info\forms.py:29 .\info\models.py:34 .\templates\category\index.html:14
+msgid "category_title"
+msgstr "Название категории"
+
+#: .\info\forms.py:57
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты/времени"
+
+#: .\info\models.py:45 .\templates\news\index.html:13
+msgid "daten"
+msgstr "Дата"
+
+#: .\info\models.py:47
+msgid "news_title"
+msgstr "Заголовок"
+
+#: .\info\models.py:48
+msgid "news_details"
+msgstr "Детали"
+
+#: .\info\models.py:49
+msgid "news_photo"
+msgstr "Фотография"
+
+#: .\info\models.py:66
+msgid "datec_comment"
+msgstr "Дата"
+
+#: .\info\models.py:68
+msgid "details_comment"
+msgstr "Комментарий"
+
+#: .\templates\article\article1.html:4 .\templates\article\article2.html:4
+#: .\templates\article\article3.html:4 .\templates\article\article4.html:4
+#: .\templates\article\article5.html:4 .\templates\article\article6.html:4
+#: .\templates\article\article7.html:4 .\templates\article\index.html:4
+#: .\templates\article\index.html:8 .\templates\base.html:49
+#: .\templates\base.html:118
+msgid "articles"
+msgstr "Статьи"
+
+#: .\templates\base.html:44
+msgid "Home"
+msgstr "Начало"
+
+#: .\templates\base.html:46 .\templates\base.html:63
+#: .\templates\news\index.html:3 .\templates\news\index.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:8
+msgid "newss"
+msgstr "Новости"
+
+#: .\templates\base.html:52 .\templates\base.html:121
+msgid "contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:62 .\templates\category\index.html:6
+msgid "categorys"
+msgstr "Категории"
+
+#: .\templates\base.html:64 .\templates\comment\index.html:6
+#: .\templates\news\read.html:32
+msgid "comments"
+msgstr "Комментарии"
+
+#: .\templates\base.html:69
+msgid "My account"
+msgstr "Моя учетная запись"
+
+#: .\templates\base.html:70
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\base.html:72
+msgid "Log out"
+msgstr "Выход"
+
+#: .\templates\base.html:77 .\templates\base.html:127
+msgid "Log In"
+msgstr "Войти"
+
+#: .\templates\base.html:78
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\templates\base.html:115 .\templates\comment\index.html:14
+#: .\templates\news\create.html:6 .\templates\news\edit.html:6
+#: .\templates\news\read.html:7
+msgid "news"
+msgstr "Новости"
+
+#: .\templates\base.html:129 .\templates\contact.html:7
+msgid "Contacts"
+msgstr "Контакты"
+
+#: .\templates\category\create.html:3 .\templates\category\index.html:7
+#: .\templates\news\index.html:7
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\category\create.html:5 .\templates\category\edit.html:5
+#: .\templates\category\read.html:5 .\templates\news\index.html:14
+msgid "category"
+msgstr "Категория"
+
+#: .\templates\category\create.html:12 .\templates\category\edit.html:12
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\category\create.html:13 .\templates\category\edit.html:13
+#: .\templates\category\read.html:18 .\templates\news\create.html:14
+#: .\templates\news\edit.html:14 .\templates\news\read.html:61
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\category\edit.html:3 .\templates\category\index.html:24
+#: .\templates\news\edit.html:3 .\templates\news\index.html:33
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\category\index.html:3 .\templates\comment\index.html:3
+msgid "List"
+msgstr "Список"
+
+#: .\templates\category\index.html:25 .\templates\category\read.html:3
+#: .\templates\news\index.html:34
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\category\index.html:26 .\templates\comment\index.html:29
+#: .\templates\news\index.html:35
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\comment\index.html:12
+msgid "datec"
+msgstr "Дата"
+
+#: .\templates\comment\index.html:13
+msgid "details"
+msgstr "Детали"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Новости"
+
+#: .\templates\index.html:78
+msgid "all newss"
+msgstr "Все новости"
+
+#: .\templates\news\create.html:3
+msgid "Create"
+msgstr "Добавить"
+
+#: .\templates\news\index.html:15
+msgid "title"
+msgstr "Заголовок"
+
+#: .\templates\news\list.html:24
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\news\list.html:25
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\news\read.html:4
+msgid "Read"
+msgstr "Просмотерть"
+
+#: .\templates\news\read.html:53
+msgid "Leave a comment"
+msgstr "Оставить комментарий"

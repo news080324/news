@@ -2,21 +2,21 @@
 :root {	
 	/* Основные цвета */	
 	/* Основные цвета */
-	--navbar-background-color:  Black;
-	--navbar-text-color: Snow;
-	--main-background-color-light: Snow;
-	--main-background-color-dark:  Silver;
+	--navbar-background-color:  DarkGreen;
+	--navbar-text-color: Gold;
+	--main-background-color-light: LemonChiffon;
+	--main-background-color-dark:  DarkKhaki;
 	--main-text-color: DarkSlateGrey;
 	--main-header-color: Black;
 	--main-text-attention-color: Purple;
 	--footer-background-color-light: Lime;
 	--footer-background-color-dark:  DarkGreen;
 	--footer-text-color: Gold;
-	--card-background-color-light: MintCream;
-	--card-background-color-dark:  Gainsboro;
+	--card-background-color-light: LemonChiffon;
+	--card-background-color-dark:  Moccasin;
 	--card-text-color: DarkSlateGray;
-	--table-background-color-light: MintCream; 
-	--table-background-color-dark: Gainsboro; 
+	--table-background-color-light: LemonChiffon; 
+	--table-background-color-dark: Moccasin; 
 	--table-text-color: DarkSlateGray;	
 	/* Звездочки в оценке */
 	--star-size: 30px;
@@ -227,7 +227,7 @@ pre {
   width: 50%;
 }
 .div-width-100-text-center {
-  background-color: var(--main-text-color); 
+  background-color: var(--navbar-background-color); 
   color: Gold;		 
   text-align: center; 
   padding-top: 10px;
@@ -489,15 +489,15 @@ pre {
 }
 
 .table-manager thead th {
-	background-color: var(--main-background-color-dark);				
+	/* background-color: var(--main-background-color-dark);				 */
 	color: var(--main-text-color);
 	font-weight: bold;
 	text-align: left;
 	padding: 10px;
-	/* background-image: linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); */
-	/* background-image: -o-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); */
-    /* background-image: -moz-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); */
-    /* background-image: -webkit-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); */
+	background-image: linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+	background-image: -o-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+    background-image: -moz-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
+    background-image: -webkit-linear-gradient(top, var(--main-background-color-dark), var(--main-background-color-light)); 
 }
 .table-manager thead tr th:first-child {
 	border-radius: 2px 0 0 2px;
